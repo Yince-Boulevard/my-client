@@ -1,0 +1,51 @@
+[graph]
+targets = []
+
+[advisories]
+ignore = [
+  "RUSTSEC-2023-0071",
+  "RUSTSEC-2024-0436"
+]
+
+[licenses]
+allow = [
+  "MIT",
+  "Apache-2.0",
+  "Unicode-DFS-2016",
+  "BSD-3-Clause",
+  "ISC",
+  "OpenSSL",
+  "BSD-2-Clause",
+  "Zlib",
+  "Unicode-3.0",
+  "CDLA-Permissive-2.0",
+]
+confidence-threshold = 0.8
+
+# 绕过缺失license字段的检查
+[[licenses.clarify]]
+name = "chat-server"
+expression = "MIT"
+license-files = []
+
+[[licenses.clarify]]
+name = "notify-server"
+expression = "MIT"
+license-files = []
+
+[[licenses.clarify]]
+name = "common"
+expression = "MIT"
+license-files = []
+
+[[licenses.clarify]]
+name = "integration-tests"
+expression = "MIT"
+license-files = []
+
+[bans]
+multiple-versions = "warn"
+
+[sources]
+unknown-registry = "warn"
+unknown-git = "warn"

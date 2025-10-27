@@ -1,0 +1,8 @@
+/target
+project.md
+/.vscode
+/project_schedule
+deny.toml.bak
+chat-server/app_config.yml
+/.git
+/.github
