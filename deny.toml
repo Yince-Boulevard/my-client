@@ -19,29 +19,16 @@ allow = [
   "Zlib",
   "Unicode-3.0",
   "CDLA-Permissive-2.0",
+  "CC0-1.0",
 ]
 confidence-threshold = 0.8
 
 # 绕过缺失license字段的检查
 [[licenses.clarify]]
-name = "chat-server"
+name = "hackernews"
 expression = "MIT"
 license-files = []
 
-[[licenses.clarify]]
-name = "notify-server"
-expression = "MIT"
-license-files = []
-
-[[licenses.clarify]]
-name = "common"
-expression = "MIT"
-license-files = []
-
-[[licenses.clarify]]
-name = "integration-tests"
-expression = "MIT"
-license-files = []
 
 [bans]
 multiple-versions = "warn"
