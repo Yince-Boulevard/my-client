@@ -6,3 +6,4 @@ deny.toml.bak
 chat-server/app_config.yml
 /.git
 /.github
+/project_schedule/*

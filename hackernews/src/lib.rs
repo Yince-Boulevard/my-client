@@ -1,7 +1,8 @@
 use chrono::{DateTime, Utc};
 use serde::{Deserialize, Serialize};
 pub(crate) mod api;
-
+mod ui;
+pub use ui::App;
 #[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
 pub struct StoryItem {
     pub id: i64,

@@ -5,7 +5,7 @@ use crate::{Comment, StoryItem, StroryData};
 
 #[allow(unused)]
 const MAX_STORIES: usize = 70;
-#[allow(unused)]
+
 pub async fn get_top_stories(limit: usize) -> Result<Vec<StoryItem>> {
     let n = limit.min(MAX_STORIES);
     let url = "https://hacker-news.firebaseio.com/v0/topstories.json";
