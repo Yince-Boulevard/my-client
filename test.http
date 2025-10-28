@@ -1,0 +1,14 @@
+### GET top stories
+GET https://hacker-news.firebaseio.com/v0/topstories.json
+
+### GET item
+
+@id = 40626807
+
+GET https://hacker-news.firebaseio.com/v0/item/{{id}}.json
+
+### GET user
+
+@user = danthegoodman1
+
+GET https://hacker-news.firebaseio.com/v0/user/@user.json
