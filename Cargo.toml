@@ -1,6 +1,6 @@
 [workspace]
 members = [
-    "hackernews",
+    "hackernews","src-tauri"
 ]
 resolver = "2"
 

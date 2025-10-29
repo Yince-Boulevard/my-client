@@ -1,7 +1,7 @@
 use anyhow::Result;
 use futures::future::join_all;
 
-use crate::{Comment, StoryItem, StroryData};
+use crate::{Comment, StoryData, StoryItem};
 
 #[allow(unused)]
 const MAX_STORIES: usize = 70;
@@ -28,7 +28,7 @@ pub async fn get_story(id: i64) -> Result<StoryItem> {
 }
 
 #[allow(unused)]
-pub async fn get_story_comments(item: StoryItem) -> Result<StroryData> {
+pub async fn get_story_comments(item: StoryItem) -> Result<StoryData> {
     let comment_futures = item.kids.iter().map(|id| get_comment_by_id(*id));
     let comments = join_all(comment_futures)
         .await
@@ -36,7 +36,7 @@ pub async fn get_story_comments(item: StoryItem) -> Result<StroryData> {
         .filter_map(|res| res.ok())
         .collect::<Vec<Comment>>();
 
-    Ok(StroryData {
+    Ok(StoryData {
         items: vec![item],
         comments,
     })

@@ -1,4 +1,5 @@
 use chrono::{DateTime, Utc};
+
 use serde::{Deserialize, Serialize};
 pub(crate) mod api;
 mod ui;
@@ -37,7 +38,7 @@ pub struct Comment {
 }
 
 #[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
-pub struct StroryData {
+pub struct StoryData {
     #[serde(flatten)]
     pub items: Vec<StoryItem>,
     #[serde(default)]
