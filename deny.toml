@@ -10,6 +10,7 @@ ignore = [
 [licenses]
 allow = [
   "MIT",
+  "BSL-1.0", # Boost Software License used by clipboard-win v5.3.1
   "Apache-2.0",
   "Unicode-DFS-2016",
   "BSD-3-Clause",
